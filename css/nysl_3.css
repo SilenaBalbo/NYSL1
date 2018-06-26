@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    top: 20px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 20px;
+
+}
+
+/* NYSL LOGO */
+
+.container1 {
+    border-bottom: 1px solid grey;
+
+}
+
+.container1 img {
+    width: 100px;
+}
+
+/* Upcoming Events Buttons */
+
+.center {
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.container1 {
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container1 img {
+}
+
+.textcontent {
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/* Style the tab */
+
+.tab {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.tab button {
+    margin: 5px;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+    padding: 6px 12px;
+    border-top: none;
+    height: 120px;
+}
+
+/* Calendar with Events */
+
+.container2 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+.tab2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.tab2 button {
+    margin: 15px;
+}
+/*
+
+
+.calButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+}
+
+.calcontent {
+    order: 1px solid #ccc;
+    border-top: none;
+}
+
+*/
+
+
+
+/* Login to account for members */ 
+
+
+.container4 {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.w3-container, .w3-panel {
+    padding: 10px;
+    margin: 10px;
+}
+
+.w3-modal-content {
+    padding: 10px;
+}
+
+.w3-container button {
+}
+
+.field .control {
+    margin-top: 10px;
+}
+
+.signAccount {
+    margin: 10px;
+}
+
+/* The Close Button */
+
+
+.memberAccount {
+    margin: 10px;
+}
+
+.field {
+    align-content: center;
+}
+
+.loginButton {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+/* Contact for more details */
+
+
+.container5 {
+    padding-bottom: 20px;
+    display: block;
+    border-bottom: 1px solid grey;
+
+}
+
+.sendButton {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px,
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

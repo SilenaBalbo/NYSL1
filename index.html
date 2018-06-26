@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NYSL Home</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Silena Balbo" />
+
+    <!-- Styling links and scripts -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://rawgit.com/juliangarnier/anime/master/anime.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+    <!-- Libraries and Frameworks etc.. -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+    <!-- My own Styling links and scripts -->
+    <link href="css/nysl_3.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="media-content">
+            <center>
+            <img src="https://ak3.picdn.net/shutterstock/videos/4710611/thumb/1.jpg" alt="NYSL">
+            </center></div>
+    </header>
+
+
+    <!-- Main Events -->
+
+    <div class="container1" id="container1">
+        <img src="css/images/nysl_logo.png" alt="nysl" class="center">
+
+        <div class="textcontent">
+            <h2>Upcoming Events</h2>
+            <p>Please select a month:</p>
+        </div>
+
+        <div id="bodycontent">
+            <div id="upcoming">
+
+                <div class="tab">
+                    <button class="button is-dark" onclick="openMonth(event, 'August')">August</button>
+                    <button class="button is-dark" onclick="openMonth(event, 'September')">September</button>
+                    <button class="button is-dark" onclick="openMonth(event, 'October')">October</button>
+                </div>
+
+
+                <div id="August" class="tabcontent">
+                    <p><b>August 4</b></p>
+                    <p>NYSL Fundraiser Event for Everyone</p>
+                    <p><b>August 16</b></p>
+                    <p>Season Kick-off: Meet the Teams</p>
+                </div>
+
+                <div id="September" class="tabcontent">
+                    <p><b>September 1</b></p>
+                    <p>First Game of the Season (Check Calendar for details)</p>
+                </div>
+
+                <div id="October" class="tabcontent">
+                    <p><b>October 18</b></p>
+                    <p>Sponsored run (details to follow)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- 
+    <button><a href="testing.html">Visit our HTML tutorial</a>
+    </button> -->
+
+    <div ng-app="myApp" ng-controller="customersCtrl">
+
+            <table>
+                    <tr ng-repeat="x in names">
+                      <td>{{ x.Name }}</td>
+                      <td>{{ x.Country }}</td>
+                      <td>{{ x.Country }}</td>
+                    </tr>
+                  </table>
+
+
+    </div>
+
+
+
+
+    <!-- Login to account for members -->
+    <div class="container4">
+    <!-- Shown on Website -->
+    <div class="textcontent">
+        <p><b>Member Chat</b></p>
+        <p>Just for Players and Coaches</p>
+    </div>
+    <!-- Login for Members -->
+
+    <div class="w3-container">
+        <center>
+            <button onclick="document.getElementById('id01').style.display='block'" class="button is-dark">Login</button>
+        </center>
+            
+        <!-- Just shown if onklick Modal -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <form id="memberAcc" class="memberAccount" name="login">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                    <input class="input is-rounded input" type="email" placeholder="User Email" id="userid">
+                    <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                    <span class="icon is-small is-right"><i class="fas fa-check"></i></span></p></div>
+
+                    <div class="field">
+                    <p class="control has-icons-left">
+                    <input class="input is-rounded input" type="password" placeholder="Password" id="pswrd"><span class="icon is-small is-left"><i class="fas fa-lock"></i></span></p></div>
+            </form>
+                   
+                    <div class="loginButton">
+                        <button id="logButton" class="button is-dark" onclick="check(form)" value="Login">Login</button></div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+
+    <!-- Sign up for Members -->
+
+    <div class="w3-container">
+        <center>
+            <button onclick="document.getElementById('id03').style.display='block'" class="button">Sign in</button></center>
+            
+            <!-- Just shown if onklick Modal -->
+            <div id="id03" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <form id="signAcc" class="signAccount" name="signUp">
+                <div class="field">
+                    
+                    <div class="control has-icons-left has-icons-right">
+                            <input class="input is-success is-rounded" type="text" placeholder="Username...">
+                            <span class="icon is-small is-left">
+                              <i class="fas fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                              <i class="fas fa-check"></i>
+                            </span>
+                          </div>
+                        </div>
+                    <p class="control has-icons-left has-icons-right">
+                    <input class="input is-rounded input" type="email" placeholder="User Email" id="userid">
+                    <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                    <span class="icon is-small is-right"><i class="fas fa-check"></i></span></p>
+                
+                    <div class="field">
+                            <p class="control has-icons-left">
+                            <input class="input is-rounded input" type="password" placeholder="Password" id="pswrd"><span class="icon is-small is-left"><i class="fas fa-lock"></i></span></p></div>
+                
+                </div>
+            </form>
+                   
+                    <div class="loginButton">
+                        <button id="logButton" class="button is-dark" onclick="check(form)" value="Login">Login</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Contact for more details -->
+    <div class="container5">
+        <div class="textcontent">
+            <p><b>Want to contact us?</b></p>
+           
+        <div class="w3-container">
+            <center><button onclick="document.getElementById('id02').style.display='block'" class="button is-dark">Yes Please!</button></center>
+
+        <div id="id02" class="w3-modal">
+            <div class="w3-modal-content">
+            <div class="w3-container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+
+            <form action="">
+                <div class="field">
+                <input id="contactName" class="input is-rounded" type="text" name="fName" placeholder="Full Name..." required>
+                </div>
+
+                <div id="contactMsg" class="field">
+                    <div class="control">
+                    <textarea name="msg" class="textarea is-success" type="text" placeholder="Your message, question and inputs for us..." required></textarea>
+                    </div>
+                </div>
+
+                <div id="contactMail" class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input is-rounded" type="email" name="_replyto" placeholder="Your Email" required><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                        <span class="icon is-small is-right"><i class="fas fa-check"></i></span></p>
+                </div>
+            
+                <label class="checkbox"><input type="checkbox">Send me the Newsletter</label>
+                <label class="checkbox"><input type="checkbox">Send me the Rules as a PDF via Email</label>
+
+
+                <div class="sendButton">
+                <button class="button is-dark" type="submit" onclick="validateForm()">Send</button></div>
+
+                <div class="ui success message hidden">
+                    <div class="header">Form Completed</div>
+                    <p>Thank you for the message.</p>
+                  </div>
+            </form>
+            </div>       
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!-- FOOTER FOOOTER FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p><strong>The NYSL</strong> by Silena Balbo&copy;</p>
+            </div>
+        </div></footer>
+
+
+    
+    <!-- SCRIPTS AT THE END OF THE PAGE -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEh-eyPa6r9HDpc4gqG9krwJ4zexcocP0",
+        authDomain: "nyslapp-d1cdf.firebaseapp.com",
+        databaseURL: "https://nyslapp-d1cdf.firebaseio.com",
+        projectId: "nyslapp-d1cdf",
+        storageBucket: "nyslapp-d1cdf.appspot.com",
+        messagingSenderId: "528714103254"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+<script src="dateData.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+    
+    <
+
+</body>
+
+</html>
